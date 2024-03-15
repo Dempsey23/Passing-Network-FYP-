@@ -1,0 +1,53 @@
+Similarity LEI passing VS STO & VS ARS (WIN/LOSS)
+---------------
+ 16.250000000000004
+Similarity LEI passing VS CITY & VS ARS(DRAW/LOSS) 
+---------------
+ 15.416666666666666
+Similarity LEI passing VS CITY & VS STO(DRAW/WIN) 
+---------------
+ 13.666666666666668
+Similarity TOT passing VS UNITED & VS NEWCASTLE (WIN/LOSS)
+---------------
+ 19.166666666666664
+Similarity TOT passing VS STOKE & VS NEWCASTLE (DRAW/LOSS) 
+---------------
+ 23.166666666666668
+Similarity TOT passing VS STOKE & VS UNITED (DRAW/WIN) 
+---------------
+ 25.166666666666664
+-----------------------
+Similarity of TOT passing VS UNITED & LEI passing vs STOKE (WIN\WIN)
+---------------
+ 20.66666666666667
+Similarity of TOT passing VS NEWCASTLE & LEI passing vs ARSENAL (LOSS\LOSS)
+---------------
+ 21.583333333333332
+Similarity of TOT passing VS STOKE & LEI passing vs CITY (DRAW\DRAW)
+---------------
+ 23.499999999999996
+Similarity of TOT passing VS UNITED & LEI passing vs ARSENAL (WIN(TOT)\LOSS(LEI)
+---------------
+ 22.083333333333332
+Similarity of TOT passing VS NEWCASTLE & LEI passing vs ARSENAL (DRAW(TOT)\LOSS(LEI)
+---------------
+ 23.083333333333332
+Similarity of TOT passing VS STOKE & LEI passing vs CITY (DRAW(TOT)\WIN(LEI)
+---------------
+ 24.166666666666664
+Similarity of TOT passing VS UNITED & LEI passing vs STOKE (LOSS(TOT)\WIN(LEI)
+---------------
+ 19.666666666666668
+Similarity of TOT passing VS NEWCASTLE & LEI passing vs ARSENAL (LOSS(TOT)\DRAW(LEI)
+---------------
+ 18.833333333333332
+Similarity of TOT passing VS STOKE & LEI passing vs CITY (WIN(TOT)\DRAW(LEI)
+---------------
+ 20.166666666666664
+
+Spectral Distance TOT VS STO & VS UNITED
+ 36.742346141747674
+Spectral Distance TOT VS NEWCASTLE & VS UNITED
+ 27.676705006196094
+Spectral Distance TOT VS NEWCASTLE & VS STOKE
+ 35.749125863438955

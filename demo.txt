@@ -1,0 +1,11 @@
+Tottenham VS Manchester United
+--------------------------------
+Tottenham Hotspur : 3 - Manchester United : 0
+
+ Number of Complete Passes: 271
+
+ Number of Incomplete Passes: 109
+
+ Average length of Passes: 21.211229851291513
+
+ Pass Success rate: 59.77859778597786

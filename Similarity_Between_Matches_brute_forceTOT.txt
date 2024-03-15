@@ -1,0 +1,9 @@
+Similarity TOT passing VS UNITED & VS NEWCASTLE (WIN/LOSS)
+---------------
+ 19.166666666666664
+Similarity TOT passing VS STOKE & VS NEWCASTLE (DRAW/LOSS) 
+---------------
+ 23.166666666666668
+Similarity TOT passing VS STOKE & VS UNITED (DRAW/WIN) 
+---------------
+ 25.166666666666664

@@ -1,0 +1,18 @@
+Similarity LEI passing VS STO & VS ARS (WIN/LOSS)
+---------------
+ 16.250000000000004
+Similarity LEI passing VS CITY & VS ARS(DRAW/LOSS) 
+---------------
+ 15.416666666666666
+Similarity LEI passing VS CITY & VS STO(DRAW/WIN) 
+---------------
+ 13.666666666666668
+Similarity TOT passing VS UNITED & VS NEWCASTLE (WIN/LOSS)
+---------------
+ 19.166666666666664
+Similarity TOT passing VS STOKE & VS NEWCASTLE (DRAW/LOSS) 
+---------------
+ 23.166666666666668
+Similarity TOT passing VS STOKE & VS UNITED (DRAW/WIN) 
+---------------
+ 25.166666666666664

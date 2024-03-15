@@ -1,0 +1,37 @@
+Tottenham VS Stoke City
+--------------------------------
+Tottenham Hotspur : 2 - Stoke City : 2
+
+ Number of Complete Passes: 346
+
+ Number of Incomplete Passes: 63
+
+ Average length of Passes: 19.206551484104043
+
+ Pass Success rate: 81.79190751445087
+
+Eccentricity value of Modified Tottenham Passing Graph {'33': 2, '23': 1, '15': 1, '10': 2, '5': 2, '2': 2, '19': 1, '22': 2, '8': 1, '4': 1, '1': 2}
+Average Eccentricity Values for Tottenham Passing Graph: 1.5454545454545454
+Average Clustering of Passing Network: 0.23338461466387653
+Node 33: Closeness Centrality = 0.9090909090909091
+Node 23: Closeness Centrality = 0.9090909090909091
+Node 15: Closeness Centrality = 0.9090909090909091
+Node 10: Closeness Centrality = 0.8333333333333334
+Node 5: Closeness Centrality = 1.0
+Node 2: Closeness Centrality = 0.8333333333333334
+Node 19: Closeness Centrality = 0.9090909090909091
+Node 22: Closeness Centrality = 0.9090909090909091
+Node 8: Closeness Centrality = 0.9090909090909091
+Node 4: Closeness Centrality = 0.9090909090909091
+Node 1: Closeness Centrality = 0.7692307692307693
+Max Betweeness: 10
+Graph Density: 0.8727272727272727
+
+Goals
+--------------------------------
+Total Shots taken: 13 
+
+Shots on target: 11 
+
+Shots off target: 2 
+

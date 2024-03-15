@@ -1,0 +1,26 @@
+Leicester VS Arsenal
+--------------------------------
+Leicester City : 2 - Arsenal : 5
+
+ Number of Complete Passes: 145
+
+ Number of Incomplete Passes: 53
+
+ Average length of Passes: 21.28514090965517
+
+ Pass Success rate: 63.44827586206897
+
+Goals
+--------------------------------
+Total Shots taken: 16 
+
+Shots on target: 11 
+
+Shots off target: 5 
+
+
+Eccentricity value of Modified Leicester Passing Graph {'4': 2, '9': 2, '14': 2, '2': 2, '20': 2, '5': 2, '15': 2, '11': 2, '26': 2, '1': 2, '6': 2}
+Average Eccentricity Values for Leicester Passing Graph: 2.0
+Average Clustering of Passing Network: 0.13979053002004715
+Max Betweeness: 14
+Graph Density: 0.5545454545454546
