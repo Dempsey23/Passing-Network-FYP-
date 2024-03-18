@@ -4,7 +4,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 # Simulated passing data (replace this with your actual passing data)
-def spectral(matrix,graph):
+def spectral(matrix,graph,name):
     passing_data = matrix
 
     # Compute similarity matrix (e.g., based on passing frequency)
@@ -25,4 +25,5 @@ def spectral(matrix,graph):
     pos = nx.spring_layout(G)  # Position nodes using the spring layout algorithm
     nx.draw(G, pos, with_labels=True, node_color=node_colors, node_size=500, cmap='gnuplot')
     plt.title('Passing Network with Spectral Clustering')
+    plt.savefig(f"{name}.png")
     plt.show()

@@ -169,6 +169,28 @@ for index, row in av_loc_LEI.iterrows():
     pitch.annotate(players_LEI[row.name], xy=(row.pass_maker_x, row.pass_maker_y), c='black', va='center', ha='center',
                    size=10, ax=ax)
 plt.title("Pass network for Leicester against Arsenal FC", size = 20)
+plt.savefig("LEI_VS_ARS__PASS_GRAPH.png")
+plt.show()
+
+#Graph of Passing Network
+pass_LEI_new = pass_LEI_new[['pass_maker', 'pass_receiver', 'number_of_passes']]
+print(pass_LEI_new.to_markdown())
+
+L_LEI = pass_LEI_new.apply(tuple, axis=1).tolist()
+print(L_LEI)
+
+G_LEI = nx.DiGraph()
+
+for i in range(len(L_LEI)):
+    G_LEI.add_edge(L_LEI[i][0], L_LEI[i][1], weight = L_LEI[i][2])
+
+edges_LEI = G_LEI.edges()
+weights_LEI = [G_LEI[u][v]['weight'] for u, v in edges_LEI]
+
+nx.draw(G_LEI, node_size=800, with_labels=True, node_color='white', width = weights_LEI)
+plt.gca().collections[0].set_edgecolor('black') # sets the edge color of the nodes to black
+plt.title("Pass network for Leicester vs Stoke City", size = 20)
+plt.savefig("LEI_VS_ARS_WEIGHTED_PASS_GRAPH.png")
 plt.show()
 
 def player_degree():
@@ -182,6 +204,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
     plt.title("Player pass degrees for Leicester VS Stoke", size=16)
+    plt.savefig("LEI_VS_ARS_DEGREE.png")
     plt.show()
 
     indeg_LEI = dict(G_LEI.in_degree())
@@ -195,6 +218,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("indegree")
     plt.title("Player pass indegrees for Leicester vs Stoke", size=16)
+    plt.savefig("LEI_VS_ARS_INDEGREE.png")
     plt.show()
 
     outdeg_LEI = dict(G_LEI.out_degree())
@@ -208,6 +232,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("outdegree")
     plt.title("Player pass outdegrees for Leicester vs Stoke", size=16)
+    plt.savefig("LEI_VS_ARS_OUTDEGREE.png")
     plt.show()
 def modified_graph():
     pass_LEI_mod = pass_LEI_new[['pass_maker', 'pass_receiver']]
@@ -224,6 +249,7 @@ def modified_graph():
     nx.draw(G_LEI_mod, node_size=800, with_labels=True, node_color='white', width = weights_LEI_mod)
     plt.gca().collections[0].set_edgecolor('black')
     plt.title("Modified pass network for Leicester vs Tottenham", size = 20)
+    plt.savefig("LEI_VS_ARS_MODIFIED.png")
     plt.show()
     E_LEI = nx.eccentricity(G_LEI_mod)
     print(E_LEI)
@@ -318,6 +344,7 @@ def goal():
     # General plot code
     ax.legend(handlelength=3, edgecolor='None', fontsize=10)
     plt.title("Leicester shot and heat map")
+    plt.savefig("LEI_VS_ARS_GOAL.png")
     plt.show()
 
 
@@ -329,6 +356,6 @@ plt.title("Adjacency matrix for Leicester vs Arsenal pass network")
 plt.show()
 goal()
 player_degree()
-SpectralClustering.spectral(A_LEI,G_LEI)
+SpectralClustering.spectral(A_LEI,G_LEI,"LEI_VS_ARS_SPECTRAL")
 modified_graph()
 sourceFile.close()

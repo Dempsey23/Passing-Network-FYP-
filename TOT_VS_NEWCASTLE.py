@@ -164,6 +164,7 @@ for index, row in av_loc_TOT.iterrows():
     pitch.annotate(players_TOT[row.name], xy=(row.pass_maker_x, row.pass_maker_y), c='black', va='center', ha='center',
                    size=10, ax=ax)
 plt.title("Pass network for Tottenham against Newcastle United", size = 20)
+plt.savefig("TOT_VS_NEW_PASS_GRAPH.png")
 plt.show()
 
 
@@ -185,6 +186,7 @@ weights_TOT = [G_TOT[u][v]['weight'] for u, v in edges_TOT]
 nx.draw(G_TOT, node_size=800, with_labels=True, node_color='white', width = weights_TOT)
 plt.gca().collections[0].set_edgecolor('black') # sets the edge color of the nodes to black
 plt.title("Pass network for Tottenham vs Manchester United", size = 20)
+plt.savefig("TOT_VS_NEW_WEIGHTED_PASS_GRAPH.png")
 plt.show()
 def player_degree():
     deg_TOT = dict(nx.degree(G_TOT))  # prepares a dictionary with jersey numbers as the node ids, i.e, the dictionary keys and degrees as the dictionary values
@@ -197,6 +199,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
     plt.title("Player pass degrees for Tottenham VS United", size=16)
+    plt.savefig("TOT_VS_NEW_DEGREE.png")
     plt.show()
 
     indeg_TOT = dict(G_TOT.in_degree())
@@ -210,6 +213,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("indegree")
     plt.title("Player pass indegrees for Tottenham vs Newcastle", size=16)
+    plt.savefig("TOT_VS_NEW_INDEGREE.png")
     plt.show()
 
     outdeg_TOT = dict(G_TOT.out_degree())
@@ -223,6 +227,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("outdegree")
     plt.title("Player pass outdegrees for Tottenham vs Newcastle", size=16)
+    plt.savefig("TOT_VS_NEW_OUTDEGREE.png")
     plt.show()
 def modified_graph():
     pass_TOT_mod = pass_TOT_new[['pass_maker', 'pass_receiver']]
@@ -239,6 +244,7 @@ def modified_graph():
     nx.draw(G_TOT_mod, node_size=800, with_labels=True, node_color='white', width = weights_TOT_mod)
     plt.gca().collections[0].set_edgecolor('black')
     plt.title("Modified pass network for Tottenham vs Newcastle", size = 20)
+    plt.savefig("TOT_VS_NEW_MODIFIED_GRAPH.png")
     plt.show()
     E_TOT = nx.eccentricity(G_TOT_mod)
     print(E_TOT)
@@ -318,6 +324,7 @@ def goal():
     # General plot code
     ax.legend(handlelength=3, edgecolor='None', fontsize=10)
     plt.title("Tottenham shot and heat map")
+    plt.savefig("TOT_VS_NEW_GOAL.png")
     plt.show()
 #Adjancency matrix
 A_TOT = nx.adjacency_matrix(G_TOT)
@@ -327,6 +334,6 @@ plt.title("Adjacency matrix for Tottenham vs Newcaslte pass network")
 plt.show()
 goal()
 player_degree()
-SpectralClustering.spectral(A_TOT,G_TOT)
+SpectralClustering.spectral(A_TOT,G_TOT,"TOT_VS_NEW_SPECTRAL")
 modified_graph()
 sourceFile.close()

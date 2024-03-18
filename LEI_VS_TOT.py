@@ -204,6 +204,7 @@ for index, row in av_loc_LEI.iterrows():
     pitch.annotate(players_LEI[row.name], xy=(row.pass_maker_x, row.pass_maker_y), c='black', va='center', ha='center',
                    size=10, ax=ax)
 plt.title("Pass network for Leicester City against Tottenham", size = 20)
+plt.savefig("LEI_VS_TOT_PASS_GRAPH.png")
 plt.show()
 
 
@@ -225,6 +226,7 @@ weights_LEI = [G_LEI[u][v]['weight'] for u, v in edges_LEI]
 nx.draw(G_LEI, node_size=800, with_labels=True, node_color='white', width = weights_LEI)
 plt.gca().collections[0].set_edgecolor('black') # sets the edge color of the nodes to black
 plt.title("Pass network for Leicester City vs Tottenham", size = 20)
+plt.savefig("LEI_VS_TOT_WEIGHTED_PASS_GRAPH.png")
 plt.show()
 
 def player_degree():
@@ -238,6 +240,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
     plt.title("Player pass degrees for Leicester VS Stoke", size=16)
+    plt.savefig("LEI_VS_TOT_DEGREE.png")
     plt.show()
 
     indeg_LEI = dict(G_LEI.in_degree())
@@ -251,6 +254,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("indegree")
     plt.title("Player pass indegrees for Leicester vs Stoke", size=16)
+    plt.savefig("LEI_VS_TOT_INDEGREE.png")
     plt.show()
 
     outdeg_LEI = dict(G_LEI.out_degree())
@@ -264,6 +268,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("outdegree")
     plt.title("Player pass outdegrees for Leicester vs Stoke", size=16)
+    plt.savefig("LEI_VS_TOT_OUTDEGREE.png")
     plt.show()
 #Modified Graph
 def modified_graph():
@@ -281,6 +286,7 @@ def modified_graph():
     nx.draw(G_LEI_mod, node_size=800, with_labels=True, node_color='white', width = weights_LEI_mod)
     plt.gca().collections[0].set_edgecolor('black')
     plt.title("Modified pass network for Leicester vs Tottenham", size = 20)
+    plt.savefig("LEI_VS_TOT_MODIFIED.png")
     plt.show()
     E_LEI = nx.eccentricity(G_LEI_mod)
     print(E_LEI)
@@ -352,6 +358,7 @@ def goal():
     # General plot code
     ax.legend(handlelength=3, edgecolor='None', fontsize=10)
     plt.title("Leicester shot and heat map")
+    plt.savefig("LEI_VS_TOT_MODIFIED.png")
     plt.show()
 
 #Adjancency matrix
@@ -361,6 +368,6 @@ sns.heatmap(A_LEI, annot = True, cmap ='gnuplot')
 plt.title("Adjacency matrix for Leicester vs Tottenham pass network")
 plt.show()
 goal()
-SpectralClustering.spectral(A_LEI,G_LEI)
+SpectralClustering.spectral(A_LEI,G_LEI,"LEI_VS_TOT_SPECTRAL")
 modified_graph()
 sourceFile.close()

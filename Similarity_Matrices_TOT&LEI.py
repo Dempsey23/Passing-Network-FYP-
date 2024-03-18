@@ -117,7 +117,7 @@ print('Similarity of TOT passing VS NEWCASTLE & LEI passing vs ARSENAL (LOSS(TOT
 print('Similarity of TOT passing VS STOKE & LEI passing vs CITY (WIN(TOT)\DRAW(LEI)\n---------------\n',sum_of_absolute_differences_by_row(normalized_TOT_UNI, normalized_LEI_CITY), file=sourceFile)
 
 #Spectral Distance
-print('\n-------Spectral Distance----------')
+print('\n-------Spectral Distance----------',file=sourceFile)
 print('\nSpectral Distance TOT VS STO & VS UNITED\n',spectral_distance(TOT_VS_STOKE.G_TOT,TOT_VS_UNITED.G_TOT),file=sourceFile)
 print('Spectral Distance TOT VS NEWCASTLE & VS UNITED\n',spectral_distance(TOT_VS_NEWCASTLE.G_TOT,TOT_VS_UNITED.G_TOT),file=sourceFile)
 print('Spectral Distance TOT VS NEWCASTLE & VS STOKE\n',spectral_distance(TOT_VS_NEWCASTLE.G_TOT,TOT_VS_STOKE.G_TOT),file=sourceFile)

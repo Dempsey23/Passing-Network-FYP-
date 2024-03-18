@@ -6,6 +6,8 @@ import numpy as np # numerical python package
 import pandas as pd # pandas for manipulating and analysing data
 import networkx as nx # package for complex network analysis
 
+import SpectralClustering
+
 match=sb.matches(competition_id=2,season_id=27)
 sourceFile = open('TOT_V_LEI.txt', 'w')
 print('Tottenham VS Leicester City\n--------------------------------',file=sourceFile)
@@ -204,6 +206,7 @@ for index, row in av_loc_TOT.iterrows():
     pitch.annotate(players_TOT[row.name], xy=(row.pass_maker_x, row.pass_maker_y), c='black', va='center', ha='center',
                    size=10, ax=ax)
 plt.title("Pass network for Tottenham against Leicester City", size = 20)
+plt.savefig("TOT_VS_LEI_PASS_GRAPH.png")
 plt.show()
 
 
@@ -225,6 +228,7 @@ weights_TOT = [G_TOT[u][v]['weight'] for u, v in edges_TOT]
 nx.draw(G_TOT, node_size=800, with_labels=True, node_color='white', width = weights_TOT)
 plt.gca().collections[0].set_edgecolor('black') # sets the edge color of the nodes to black
 plt.title("Pass network for Tottenham vs Leicester City", size = 20)
+plt.savefig("TOT_VS_LEI_WEIGHTED_PASS_GRAPH.png")
 plt.show()
 
 def player_degree():
@@ -238,6 +242,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
     plt.title("Player pass degrees for Tottenham VS United", size=16)
+    plt.savefig("TOT_VS_LEI_DEGREE.png")
     plt.show()
 
     indeg_TOT = dict(G_TOT.in_degree())
@@ -251,6 +256,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("indegree")
     plt.title("Player pass indegrees for Tottenham vs Leicester", size=16)
+    plt.savefig("TOT_VS_LEI_INDEGREE.png")
     plt.show()
 
     outdeg_TOT = dict(G_TOT.out_degree())
@@ -264,6 +270,7 @@ def player_degree():
     plt.ylabel("Player Jersey number")
     plt.xlabel("outdegree")
     plt.title("Player pass outdegrees for Tottenham vs Leicester", size=16)
+    plt.savefig("TOT_VS_LEI_OUTDEGREE.png")
     plt.show()
 
 def modified_graph():
@@ -281,6 +288,7 @@ def modified_graph():
     nx.draw(G_TOT_mod, node_size=800, with_labels=True, node_color='white', width = weights_TOT_mod)
     plt.gca().collections[0].set_edgecolor('black')
     plt.title("Modified pass network for Tottenham vs Leicester", size = 20)
+    plt.savefig("TOT_VS_LEI_MODIFIED_GRAPH.png")
     plt.show()
     E_TOT = nx.eccentricity(G_TOT_mod)
     print(E_TOT)
@@ -360,6 +368,7 @@ def goal():
     # General plot code
     ax.legend(handlelength=3, edgecolor='None', fontsize=10)
     plt.title("Tottenham shot and heat map")
+    plt.savefig("TOT_VS_LEI_GOAL.png")
     plt.show()
 
 #Adjacency Matrix
@@ -369,6 +378,7 @@ sns.heatmap(A_TOT, annot = True, cmap ='gnuplot')
 plt.title("Adjacency matrix for Tottenham vs Leicester pass network")
 plt.show()
 goal()
+SpectralClustering.spectral(A_TOT,G_TOT,"TOT_VS_LEI_SPECTRAL")
 player_degree()
 modified_graph()
 sourceFile.close()

@@ -29,4 +29,4 @@ Shots off target: 5
 
 Eccentricity value of Modified Leicester Passing Graph {'15': 2, '10': 2, '11': 2, '2': 2, '26': 2, '6': 2, '20': 2, '5': 2, '4': 2, '9': 2, '1': 2}
 Average Eccentricity Values for Leicester Passing Graph: 2.0
-Average Clustering of Passing Network: 0.17080415212633074
+Average Clustering of Passing Network: 0.1708041521263307
