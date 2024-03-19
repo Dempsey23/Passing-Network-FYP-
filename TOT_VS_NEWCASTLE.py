@@ -265,7 +265,16 @@ def modified_graph():
     # Calculate the density of the graph
     density = nx.density(G_TOT)
     print("Graph Density:", density,file=sourceFile)
-    
+    #Eigenvector
+    eigenvector=nx.eigenvector_centrality(G_TOT)
+    sorted_eigen=sorted(eigenvector.items(), key=lambda x: x[1], reverse=True)
+    # Print eigenvector centrality values
+    print("\n------------\nEigenvector Centrality (Highest to Lowest):",file=sourceFile)
+    for node, centrality in sorted_eigen:
+        print(f"Node {node}: {centrality}",file=sourceFile)
+    shortest_path=nx.shortest_path(G_TOT_mod,weight='weight')
+    return shortest_path
+
 def goal():
     print('\nGoals\n--------------------------------', file=sourceFile)
     events_pn = TOT_NEW_events[['minute', 'second', 'team', 'type', 'location','shot_end_location','player','shot_outcome']]
@@ -335,5 +344,5 @@ plt.show()
 goal()
 player_degree()
 SpectralClustering.spectral(A_TOT,G_TOT,"TOT_VS_NEW_SPECTRAL")
-modified_graph()
+short_path=modified_graph()
 sourceFile.close()

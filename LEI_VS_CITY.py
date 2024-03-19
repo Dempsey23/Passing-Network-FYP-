@@ -267,6 +267,15 @@ def modified_graph():
     # Calculate the density of the graph
     density = nx.density(G_LEI)
     print("Graph Density:", density,file=sourceFile)
+    #Eigenvector
+    eigenvector=nx.eigenvector_centrality(G_LEI)
+    sorted_eigen=sorted(eigenvector.items(), key=lambda x: x[1], reverse=True)
+    # Print eigenvector centrality values
+    print("\n------------\nEigenvector Centrality (Highest to Lowest):",file=sourceFile)
+    for node, centrality in sorted_eigen:
+        print(f"Node {node}: {centrality}",file=sourceFile)
+    shortest_path=nx.shortest_path(G_LEI_mod,weight='weight')
+    return shortest_path
 def goal():
     print('\nGoals\n--------------------------------',file=sourceFile)
     events_pn = LEI_CITY_events[['minute', 'second', 'team', 'type', 'location','shot_end_location','player','shot_outcome']]
@@ -337,5 +346,5 @@ plt.show()
 goal()
 player_degree()
 SpectralClustering.spectral(A_LEI,G_LEI,"LEI_VS_CITY_SPECTRAL")
-modified_graph()
+short_path=modified_graph()
 sourceFile.close()

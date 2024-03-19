@@ -297,7 +297,25 @@ def modified_graph():
     cc_LEI = nx.average_clustering(G_LEI, weight='weight')
     print(cc_LEI)
     print('Average Clustering of Passing Network:',cc_LEI,file=sourceFile)
-
+    closeness_centrality = nx.closeness_centrality(G_LEI)
+    # Print closeness centrality for each node
+    for node, closeness in closeness_centrality.items():
+        print(f"Node {node}: Closeness Centrality = {closeness}",file=sourceFile)
+    betweeness=nx.betweenness_centrality(G_LEI, weight = 'weight')
+    max_bc = max(betweeness, key = betweeness.get)
+    print('Max Betweeness:',max_bc,file=sourceFile)
+    # Calculate the density of the graph
+    density = nx.density(G_LEI)
+    print("Graph Density:", density,file=sourceFile)
+    #Eigenvector
+    eigenvector=nx.eigenvector_centrality(G_LEI)
+    sorted_eigen=sorted(eigenvector.items(), key=lambda x: x[1], reverse=True)
+    # Print eigenvector centrality values
+    print("\n------------\nEigenvector Centrality (Highest to Lowest):",file=sourceFile)
+    for node, centrality in sorted_eigen:
+        print(f"Node {node}: {centrality}",file=sourceFile)
+    shortest_path=nx.shortest_path(G_LEI_mod,weight='weight')
+    return shortest_path
 
 #Shots & Goals
 def goal():
@@ -369,5 +387,5 @@ plt.title("Adjacency matrix for Leicester vs Tottenham pass network")
 plt.show()
 goal()
 SpectralClustering.spectral(A_LEI,G_LEI,"LEI_VS_TOT_SPECTRAL")
-modified_graph()
+short_path=modified_graph()
 sourceFile.close()
