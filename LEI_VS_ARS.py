@@ -260,6 +260,10 @@ def modified_graph():
     cc_LEI = nx.average_clustering(G_LEI, weight='weight')
     print(cc_LEI)
     print('Average Clustering of Passing Network:', cc_LEI, file=sourceFile)
+    closeness_centrality = nx.closeness_centrality(G_LEI)
+    # Print closeness centrality for each node
+    for node, closeness in closeness_centrality.items():
+        print(f"Node {node}: Closeness Centrality = {closeness}", file=sourceFile)
     betweeness=nx.betweenness_centrality(G_LEI, weight = 'weight')
     max_bc = max(betweeness, key = betweeness.get)
     print('Max Betweeness:',max_bc,file=sourceFile)
@@ -362,6 +366,7 @@ A_LEI = nx.adjacency_matrix(G_LEI)
 A_LEI=A_LEI.todense()
 sns.heatmap(A_LEI, annot = True, cmap ='gnuplot')
 plt.title("Adjacency matrix for Leicester vs Arsenal pass network")
+plt.savefig("LEI_VS_ARS_ADJ_MATRIX.png")
 plt.show()
 goal()
 player_degree()

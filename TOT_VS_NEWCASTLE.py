@@ -15,6 +15,9 @@ print('\n Tottenham VS Newcastle United\n--------------------------------',file=
 #print(match.to_markdown())
 
 TOT_NEW_events=sb.events(match_id=3754276)
+for i in range(380):
+    if match['match_id'][i] == 3754276:
+        print(match['home_team'][i], ':', match['home_score'][i], '-', match['away_team'][i], ':', match['away_score'][i],file=sourceFile)
 print(TOT_NEW_events.head(10).to_markdown())
 
 tact = TOT_NEW_events[TOT_NEW_events['tactics'].isnull() == False]

@@ -80,6 +80,7 @@ print(events_pn_STO.head(10).to_markdown())
 events_pn_LEI2=events_pn_LEI
 events_pn_STO = events_pn_STO[events_pn_STO['pass_outcome'].isnull() == True].reset_index()
 events_pn_LEI= events_pn_LEI[events_pn_LEI['pass_outcome'].isnull() == True].reset_index()
+
 print(events_pn_LEI.head(10).to_markdown())
 
 #Substitutes

@@ -45,9 +45,20 @@ Similarity of TOT passing VS STOKE & LEI passing vs CITY (WIN(TOT)\DRAW(LEI)
 ---------------
  20.166666666666664
 
+-------Spectral Distance----------
+
 Spectral Distance TOT VS STO & VS UNITED
  36.742346141747674
 Spectral Distance TOT VS NEWCASTLE & VS UNITED
  27.676705006196094
 Spectral Distance TOT VS NEWCASTLE & VS STOKE
  35.749125863438955
+Spectral Distance LEI VS STO & VS ARS (WIN/LOSS)
+---------------
+ 27.694764848252458
+Spectral Distance LEI VS CITY & VS ARS(DRAW/LOSS) 
+---------------
+ 26.13426869074396
+Spectral Distance LEI VS CITY & VS STO(DRAW/WIN) 
+---------------
+ 21.77154105707724

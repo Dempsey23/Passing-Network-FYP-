@@ -12,7 +12,7 @@ Tottenham Hotspur : 2 - Stoke City : 2
 
 Eccentricity value of Modified Tottenham Passing Graph {'33': 2, '23': 1, '15': 1, '10': 2, '5': 2, '2': 2, '19': 1, '22': 2, '8': 1, '4': 1, '1': 2}
 Average Eccentricity Values for Tottenham Passing Graph: 1.5454545454545454
-Average Clustering of Passing Network: 0.23338461466387647
+Average Clustering of Passing Network: 0.23338461466387653
 Node 33: Closeness Centrality = 0.9090909090909091
 Node 23: Closeness Centrality = 0.9090909090909091
 Node 15: Closeness Centrality = 0.9090909090909091

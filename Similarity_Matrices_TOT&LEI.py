@@ -1,3 +1,6 @@
+import LEI_VS_ARS
+import LEI_VS_CITY
+import LEI_VS_STO
 import TOT_VS_NEWCASTLE
 import TOT_VS_STOKE
 import TOT_VS_UNITED
@@ -37,11 +40,6 @@ def spectral_distance(G1, G2):
     A1 = nx.linalg.graphmatrix.adjacency_matrix(G1).toarray()
     A2 = nx.linalg.graphmatrix.adjacency_matrix(G2).toarray()
 
-    # Pad the adjacency matrices with zeros to match dimensions
-    if n1 > n2:
-        A2 = np.pad(A2, ((0, n1 - n2), (0, n1 - n2)), mode='constant')
-    elif n2 > n1:
-        A1 = np.pad(A1, ((0, n2 - n1), (0, n2 - n1)), mode='constant')
 
     # Compute the difference between adjacency matrices
     diff = A1 - A2
@@ -122,6 +120,6 @@ print('\nSpectral Distance TOT VS STO & VS UNITED\n',spectral_distance(TOT_VS_ST
 print('Spectral Distance TOT VS NEWCASTLE & VS UNITED\n',spectral_distance(TOT_VS_NEWCASTLE.G_TOT,TOT_VS_UNITED.G_TOT),file=sourceFile)
 print('Spectral Distance TOT VS NEWCASTLE & VS STOKE\n',spectral_distance(TOT_VS_NEWCASTLE.G_TOT,TOT_VS_STOKE.G_TOT),file=sourceFile)
 
-print('Spectral Distance LEI VS STO & VS ARS (WIN/LOSS)\n---------------\n',spectral_distance(normalized_LEI_STO,normalized_LEI_ARS),file=sourceFile)
-print('Spectral Distance LEI VS CITY & VS ARS(DRAW/LOSS) \n---------------\n',spectral_distance(normalized_LEI_CITY,normalized_LEI_ARS),file=sourceFile)
-print('Spectral Distance LEI VS CITY & VS STO(DRAW/WIN) \n---------------\n',spectral_distance(normalized_LEI_CITY,normalized_LEI_STO),file=sourceFile)
+print('Spectral Distance LEI VS STO & VS ARS (WIN/LOSS)\n---------------\n',spectral_distance(LEI_VS_STO.G_LEI,LEI_VS_ARS.G_LEI),file=sourceFile)
+print('Spectral Distance LEI VS CITY & VS ARS(DRAW/LOSS) \n---------------\n',spectral_distance(LEI_VS_CITY.G_LEI,LEI_VS_ARS.G_LEI),file=sourceFile)
+print('Spectral Distance LEI VS CITY & VS STO(DRAW/WIN) \n---------------\n',spectral_distance(LEI_VS_CITY.G_LEI,LEI_VS_STO.G_LEI),file=sourceFile)

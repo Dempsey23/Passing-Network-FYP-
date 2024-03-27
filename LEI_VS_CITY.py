@@ -5,14 +5,11 @@ import seaborn as sns # seaborn for plotting useful statistical graphs
 import numpy as np # numerical python package
 import pandas as pd # pandas for manipulating and analysing data
 import networkx as nx # package for complex network analysis
-
 import SpectralClustering
 
 match=sb.matches(competition_id=2,season_id=27)
 sourceFile = open('LEI_V_CITY.txt', 'w')
 print('Leicester VS Manchester City\n--------------------------------',file=sourceFile)
-
-#print(match.to_markdown())
 
 LEI_CITY_events=sb.events(match_id=3754045)
 for i in range(380):
@@ -23,15 +20,12 @@ print(LEI_CITY_events.head(10).to_markdown())
 
 tact = LEI_CITY_events[LEI_CITY_events['tactics'].isnull() == False]
 tact = tact[['tactics', 'team', 'type']]
-print(tact.to_markdown())
 
 tact = tact[tact['type'] == 'Starting XI']
 tact_LEI = tact[tact['team'] == 'Leicester City']
 tact_CITY = tact[tact['team'] == 'Manchester City']
 tact_LEI = tact_LEI['tactics']
 tact_CITY = tact_CITY['tactics']
-print(tact_LEI.to_markdown())
-print(tact_CITY.to_markdown())
 
 dict_LEI = tact_LEI[0]['lineup']
 dict_CITY = tact_CITY[1]['lineup']
@@ -195,8 +189,8 @@ plt.savefig("LEI_VS_CITY_WEIGHTED_PASS_GRAPH.png")
 plt.show()
 
 def player_degree():
-    deg_LEI = dict(nx.degree(G_LEI))  # prepares a dictionary with jersey numbers as the node ids, i.e, the dictionary keys and degrees as the dictionary values
-    degree_LEI = pd.DataFrame.from_dict(list(deg_LEI.items()))  # convert a dictionary to a pandas dataframe
+    deg_LEI = dict(nx.degree(G_LEI))                                                            # prepares a dictionary with jersey numbers as the node ids, i.e, the dictionary keys and degrees as the dictionary values
+    degree_LEI = pd.DataFrame.from_dict(list(deg_LEI.items()))                              # convert a dictionary to a pandas dataframe
     degree_LEI.rename(columns={0: 'jersey_number', 1: 'node_degree'}, inplace=True)
     X = list(deg_LEI.keys())
     Y = list(deg_LEI.values())
@@ -252,7 +246,7 @@ def modified_graph():
     plt.title("Modified pass network for Leicester vs Tottenham", size = 20)
     plt.show()
     plt.savefig("LEI_VS_CITY_MODIFIED.png")
-    E_LEI = nx.eccentricity(G_LEI_mod)
+    E_LEI = nx.eccentricity(G_LEI)
     print(E_LEI)
     print('\nEccentricity value of Modified Leicester Passing Graph',E_LEI,file=sourceFile)
     av_E_LEI = sum(list(E_LEI.values())) / len(E_LEI)
@@ -261,6 +255,10 @@ def modified_graph():
     cc_LEI = nx.average_clustering(G_LEI, weight='weight')
     print(cc_LEI)
     print('Average Clustering of Passing Network:',cc_LEI,file=sourceFile)
+    closeness_centrality = nx.closeness_centrality(G_LEI_mod)
+    # Print closeness centrality for each node
+    for node, closeness in closeness_centrality.items():
+        print(f"Node {node}: Closeness Centrality = {closeness}", file=sourceFile)
     betweeness=nx.betweenness_centrality(G_LEI, weight = 'weight')
     max_bc = max(betweeness, key = betweeness.get)
     print('Max Betweeness:',max_bc,file=sourceFile)
