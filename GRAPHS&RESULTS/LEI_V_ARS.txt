@@ -1,0 +1,51 @@
+Leicester VS Arsenal
+--------------------------------
+Leicester City : 2 - Arsenal : 5
+
+ Number of Complete Passes: 145
+
+ Number of Incomplete Passes: 53
+
+ Average length of Passes: 21.28514090965517
+
+ Pass Success rate: 63.44827586206897
+
+Goals
+--------------------------------
+Total Shots taken: 16 
+
+Shots on target: 11 
+
+Shots off target: 5 
+
+
+Eccentricity value of Modified Leicester Passing Graph {'4': 2, '9': 2, '14': 2, '2': 2, '20': 2, '5': 2, '15': 2, '11': 2, '26': 2, '1': 2, '6': 2}
+Average Eccentricity Values for Leicester Passing Graph: 2.0
+Average Clustering of Passing Network: 0.13979053002004713
+Node 4: Closeness Centrality = 0.9090909090909091
+Node 9: Closeness Centrality = 0.6666666666666666
+Node 14: Closeness Centrality = 0.7692307692307693
+Node 2: Closeness Centrality = 0.5882352941176471
+Node 20: Closeness Centrality = 0.6666666666666666
+Node 5: Closeness Centrality = 0.625
+Node 15: Closeness Centrality = 0.625
+Node 11: Closeness Centrality = 0.8333333333333334
+Node 26: Closeness Centrality = 0.7142857142857143
+Node 1: Closeness Centrality = 0.7142857142857143
+Node 6: Closeness Centrality = 0.625
+Max Betweeness: 14
+Graph Density: 0.5545454545454546
+
+------------
+Eigenvector Centrality (Highest to Lowest):
+Node 4: 0.44804260051945594
+Node 11: 0.4039586574285716
+Node 14: 0.35014507865918987
+Node 26: 0.3422663847147043
+Node 1: 0.28075838790344404
+Node 20: 0.2674187702455642
+Node 9: 0.25600686219995333
+Node 15: 0.2448488270674956
+Node 6: 0.2076985081487824
+Node 2: 0.2001276445974971
+Node 5: 0.1931556364861975

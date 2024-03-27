@@ -1,0 +1,51 @@
+Leicester VS Stoke
+--------------------------------
+Leicester City : 3 - Stoke City : 0
+
+ Number of Complete Passes: 191
+
+ Number of Incomplete Passes: 75
+
+ Average length of Passes: 18.877987663874347
+
+ Pass Success rate: 60.73298429319372
+
+Goals
+--------------------------------
+Total Shots taken: 14 
+
+Shots on target: 7 
+
+Shots off target: 7 
+
+
+Eccentricity value of Modified Leicester Passing Graph {'4': 1, '28': 2, '1': 2, '11': 2, '14': 2, '26': 2, '6': 2, '20': 2, '17': 2, '5': 2, '9': 2}
+Average Eccentricity Values for Leicester Passing Graph: 1.9090909090909092
+Average Clustering of Passing Network: 0.17739417406145178
+Node 4: Closeness Centrality = 0.9090909090909091
+Node 28: Closeness Centrality = 0.7692307692307693
+Node 1: Closeness Centrality = 0.7142857142857143
+Node 11: Closeness Centrality = 0.9090909090909091
+Node 14: Closeness Centrality = 0.9090909090909091
+Node 26: Closeness Centrality = 0.8333333333333334
+Node 6: Closeness Centrality = 0.6666666666666666
+Node 20: Closeness Centrality = 0.7142857142857143
+Node 17: Closeness Centrality = 0.9090909090909091
+Node 5: Closeness Centrality = 0.6666666666666666
+Node 9: Closeness Centrality = 0.7142857142857143
+Max Betweeness: 26
+Graph Density: 0.7181818181818181
+
+------------
+Eigenvector Centrality (Highest to Lowest):
+Node 11: 0.3628552226648756
+Node 14: 0.3601179166099015
+Node 4: 0.3574306854537039
+Node 17: 0.3544606872886205
+Node 26: 0.339035930830542
+Node 28: 0.28889637296694626
+Node 20: 0.26692141421275034
+Node 9: 0.2640582534134419
+Node 1: 0.24158570683838065
+Node 5: 0.21869375779748537
+Node 6: 0.1992014233570517

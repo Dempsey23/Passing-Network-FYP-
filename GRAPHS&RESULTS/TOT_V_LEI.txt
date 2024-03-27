@@ -1,0 +1,59 @@
+Tottenham VS Leicester City
+--------------------------------
+Tottenham Hotspur : 0 - Leicester City : 1
+
+ TOTTENHAM- Number of Complete Passes: 337
+
+ TOTTENHAM- Number of Incomplete Passes: 92
+
+ LEICESTER- Number of Complete Passes: 131
+
+ LEICESTER- Number of Incomplete Passes: 96
+
+ TOTTENHAM- Average length of Passes: 21.684777114836795
+
+ LEICESTER- Average length of Passes: 20.672263483969463
+
+ TOTTENHAM- Pass Success rate: 72.70029673590504
+
+ LEICESTER- Pass Success rate: 26.717557251908403
+
+Goals
+--------------------------------
+Total Shots taken: 21 
+
+Shots on target: 15 
+
+Shots off target: 6 
+
+
+Eccentricity value of Modified Tottenham Passing Graph {'33': 2, '20': 2, '23': 2, '15': 2, '11': 2, '10': 2, '1': 2, '5': 1, '2': 1, '4': 2, '28': 2}
+Average Eccentricity Values for Tottenham Passing Graph: 1.8181818181818181
+Average Clustering of Passing Network: 0.18670567372789815
+Node 33: Closeness Centrality = 0.9090909090909091
+Node 20: Closeness Centrality = 1.0
+Node 23: Closeness Centrality = 0.8333333333333334
+Node 15: Closeness Centrality = 0.7692307692307693
+Node 11: Closeness Centrality = 0.8333333333333334
+Node 10: Closeness Centrality = 1.0
+Node 1: Closeness Centrality = 0.6666666666666666
+Node 5: Closeness Centrality = 0.9090909090909091
+Node 2: Closeness Centrality = 0.9090909090909091
+Node 4: Closeness Centrality = 0.7692307692307693
+Node 28: Closeness Centrality = 0.9090909090909091
+Max Betweeness: 10
+Graph Density: 0.8272727272727273
+
+------------
+Eigenvector Centrality (Highest to Lowest):
+Node 20: 0.34994357397378156
+Node 10: 0.34994357397378156
+Node 28: 0.329688129843055
+Node 33: 0.32424628311973863
+Node 2: 0.3176302548593053
+Node 5: 0.3125565707397535
+Node 23: 0.3039908389890121
+Node 11: 0.30245394415179566
+Node 15: 0.254914123374999
+Node 4: 0.24052796169893959
+Node 1: 0.1895910258969097
