@@ -239,7 +239,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
-    plt.title("Player pass degrees for Leicester VS Stoke", size=16)
+    plt.title("Player pass degrees for Leicester VS Tottenham", size=16)
     plt.savefig("LEI_VS_TOT_DEGREE.png")
     plt.show()
 
@@ -253,7 +253,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("indegree")
-    plt.title("Player pass indegrees for Leicester vs Stoke", size=16)
+    plt.title("Player pass indegrees for Leicester vs Tottenham", size=16)
     plt.savefig("LEI_VS_TOT_INDEGREE.png")
     plt.show()
 
@@ -267,7 +267,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("outdegree")
-    plt.title("Player pass outdegrees for Leicester vs Stoke", size=16)
+    plt.title("Player pass outdegrees for Leicester vs Tottenham", size=16)
     plt.savefig("LEI_VS_TOT_OUTDEGREE.png")
     plt.show()
 #Modified Graph
@@ -302,6 +302,8 @@ def modified_graph():
     for node, closeness in closeness_centrality.items():
         print(f"Node {node}: Closeness Centrality = {closeness}",file=sourceFile)
     betweeness=nx.betweenness_centrality(G_LEI, weight = 'weight')
+    for node, between in betweeness.items():
+        print(f"Node {node}: Betweenness Centrality = {between}",file=sourceFile)
     max_bc = max(betweeness, key = betweeness.get)
     print('Max Betweeness:',max_bc,file=sourceFile)
     # Calculate the density of the graph
@@ -386,6 +388,7 @@ sns.heatmap(A_LEI, annot = True, cmap ='gnuplot')
 plt.title("Adjacency matrix for Leicester vs Tottenham pass network")
 plt.show()
 goal()
+player_degree()
 SpectralClustering.spectral(A_LEI,G_LEI,"LEI_VS_TOT_SPECTRAL")
 short_path=modified_graph()
 sourceFile.close()

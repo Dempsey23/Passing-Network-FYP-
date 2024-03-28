@@ -270,6 +270,8 @@ def modified_graph():
     for node, closeness in closeness_centrality.items():
         print(f"Node {node}: Closeness Centrality = {closeness}",file=sourceFile)
     betweeness=nx.betweenness_centrality(G_LEI, weight = 'weight')
+    for node, between in betweeness.items():
+        print(f"Node {node}: Betweenness Centrality = {between}",file=sourceFile)
     max_bc = max(betweeness, key = betweeness.get)
     print('Max Betweeness:',max_bc,file=sourceFile)
     # Calculate the density of the graph

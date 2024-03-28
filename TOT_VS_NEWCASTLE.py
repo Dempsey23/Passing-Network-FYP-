@@ -188,7 +188,7 @@ weights_TOT = [G_TOT[u][v]['weight'] for u, v in edges_TOT]
 
 nx.draw(G_TOT, node_size=800, with_labels=True, node_color='white', width = weights_TOT)
 plt.gca().collections[0].set_edgecolor('black') # sets the edge color of the nodes to black
-plt.title("Pass network for Tottenham vs Manchester United", size = 20)
+plt.title("Pass network for Tottenham vs Newcastle", size = 20)
 plt.savefig("TOT_VS_NEW_WEIGHTED_PASS_GRAPH.png")
 plt.show()
 def player_degree():
@@ -201,7 +201,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
-    plt.title("Player pass degrees for Tottenham VS United", size=16)
+    plt.title("Player pass degrees for Tottenham VS Newcastle United", size=16)
     plt.savefig("TOT_VS_NEW_DEGREE.png")
     plt.show()
 

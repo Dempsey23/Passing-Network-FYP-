@@ -231,7 +231,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("outdegree")
-    plt.title("Player pass outdegrees for Tottenham vs United", size=16)
+    plt.title("Player pass outdegrees for Tottenham vs Stoke City", size=16)
     plt.savefig('TOT_VS_STOKE_PASS_OUTDEGREE.png')
     plt.show()
 def modified_graph():

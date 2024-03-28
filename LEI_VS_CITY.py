@@ -198,7 +198,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
-    plt.title("Player pass degrees for Leicester VS Stoke", size=16)
+    plt.title("Player pass degrees for Leicester VS City", size=16)
     plt.savefig("LEI_VS_CITY_DEGREE.png")
     plt.show()
 
@@ -212,7 +212,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("indegree")
-    plt.title("Player pass indegrees for Leicester vs Stoke", size=16)
+    plt.title("Player pass indegrees for Leicester vs City", size=16)
     plt.savefig("LEI_VS_CITY_INDEGREE.png")
     plt.show()
 
@@ -226,7 +226,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("outdegree")
-    plt.title("Player pass outdegrees for Leicester vs Stoke", size=16)
+    plt.title("Player pass outdegrees for Leicester vs City", size=16)
     plt.savefig("LEI_VS_CITY_OUTDEGREE.png")
     plt.show()
 def modified_graph():
@@ -243,7 +243,7 @@ def modified_graph():
 
     nx.draw(G_LEI_mod, node_size=800, with_labels=True, node_color='white', width = weights_LEI_mod)
     plt.gca().collections[0].set_edgecolor('black')
-    plt.title("Modified pass network for Leicester vs Tottenham", size = 20)
+    plt.title("Modified pass network for Leicester vs City", size = 20)
     plt.show()
     plt.savefig("LEI_VS_CITY_MODIFIED.png")
     E_LEI = nx.eccentricity(G_LEI)
@@ -260,6 +260,8 @@ def modified_graph():
     for node, closeness in closeness_centrality.items():
         print(f"Node {node}: Closeness Centrality = {closeness}", file=sourceFile)
     betweeness=nx.betweenness_centrality(G_LEI, weight = 'weight')
+    for node, between in betweeness.items():
+        print(f"Node {node}: Betweenness Centrality = {between}",file=sourceFile)
     max_bc = max(betweeness, key = betweeness.get)
     print('Max Betweeness:',max_bc,file=sourceFile)
     # Calculate the density of the graph

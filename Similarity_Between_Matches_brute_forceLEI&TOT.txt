@@ -62,3 +62,14 @@ Spectral Distance LEI VS CITY & VS ARS(DRAW/LOSS)
 Spectral Distance LEI VS CITY & VS STO(DRAW/WIN) 
 ---------------
  21.77154105707724
+
+-------Spectral Distance (Same Result) ----------
+Spectral Distance TOT passing VS UNITED & LEI passing vs STOKE (WIN\WIN)
+---------------
+ 30.495901363953813
+Spectral Distance TOT passing VS NEWCASTLE & LEI passing vs ARSENAL (LOSS\LOSS)
+---------------
+ 32.60368077380221
+Spectral Distance TOT passing VS STOKE & LEI passing vs CITY (DRAW\DRAW)
+---------------
+ 37.36308338453881

@@ -41,6 +41,17 @@ Node 5: Closeness Centrality = 0.7142857142857143
 Node 4: Closeness Centrality = 0.9090909090909091
 Node 9: Closeness Centrality = 0.8333333333333334
 Node 1: Closeness Centrality = 0.7692307692307693
+Node 15: Betweenness Centrality = 0.053703703703703705
+Node 10: Betweenness Centrality = 0.0
+Node 11: Betweenness Centrality = 0.01388888888888889
+Node 2: Betweenness Centrality = 0.032777777777777774
+Node 26: Betweenness Centrality = 0.08
+Node 6: Betweenness Centrality = 0.12759259259259262
+Node 20: Betweenness Centrality = 0.06018518518518519
+Node 5: Betweenness Centrality = 0.10907407407407407
+Node 4: Betweenness Centrality = 0.07814814814814815
+Node 9: Betweenness Centrality = 0.185
+Node 1: Betweenness Centrality = 0.018518518518518517
 Max Betweeness: 9
 Graph Density: 0.7
 

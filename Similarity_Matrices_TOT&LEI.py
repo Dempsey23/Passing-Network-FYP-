@@ -123,3 +123,9 @@ print('Spectral Distance TOT VS NEWCASTLE & VS STOKE\n',spectral_distance(TOT_VS
 print('Spectral Distance LEI VS STO & VS ARS (WIN/LOSS)\n---------------\n',spectral_distance(LEI_VS_STO.G_LEI,LEI_VS_ARS.G_LEI),file=sourceFile)
 print('Spectral Distance LEI VS CITY & VS ARS(DRAW/LOSS) \n---------------\n',spectral_distance(LEI_VS_CITY.G_LEI,LEI_VS_ARS.G_LEI),file=sourceFile)
 print('Spectral Distance LEI VS CITY & VS STO(DRAW/WIN) \n---------------\n',spectral_distance(LEI_VS_CITY.G_LEI,LEI_VS_STO.G_LEI),file=sourceFile)
+print('\n-------Spectral Distance (Same Result) ----------',file=sourceFile)
+print('Spectral Distance TOT passing VS UNITED & LEI passing vs STOKE (WIN\WIN)\n---------------\n',spectral_distance(TOT_VS_UNITED.G_TOT,LEI_VS_STO.G_LEI),file=sourceFile)
+
+print('Spectral Distance TOT passing VS NEWCASTLE & LEI passing vs ARSENAL (LOSS\LOSS)\n---------------\n',spectral_distance(TOT_VS_NEWCASTLE.G_TOT,LEI_VS_ARS.G_LEI),file=sourceFile)
+
+print('Spectral Distance TOT passing VS STOKE & LEI passing vs CITY (DRAW\DRAW)\n---------------\n',spectral_distance(TOT_VS_STOKE.G_TOT,LEI_VS_CITY.G_LEI),file=sourceFile)

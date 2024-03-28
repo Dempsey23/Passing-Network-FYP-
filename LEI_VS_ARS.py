@@ -189,7 +189,7 @@ weights_LEI = [G_LEI[u][v]['weight'] for u, v in edges_LEI]
 
 nx.draw(G_LEI, node_size=800, with_labels=True, node_color='white', width = weights_LEI)
 plt.gca().collections[0].set_edgecolor('black') # sets the edge color of the nodes to black
-plt.title("Pass network for Leicester vs Stoke City", size = 20)
+plt.title("Pass network for Leicester vs Arsenal", size = 20)
 plt.savefig("LEI_VS_ARS_WEIGHTED_PASS_GRAPH.png")
 plt.show()
 
@@ -203,7 +203,7 @@ def player_degree():
     plt.xticks(range(0, max(Y) + 5, 2))
     plt.ylabel("Player Jersey number")
     plt.xlabel("degree")
-    plt.title("Player pass degrees for Leicester VS Stoke", size=16)
+    plt.title("Player pass degrees for Leicester VS Arsenal", size=16)
     plt.savefig("LEI_VS_ARS_DEGREE.png")
     plt.show()
 
@@ -265,6 +265,8 @@ def modified_graph():
     for node, closeness in closeness_centrality.items():
         print(f"Node {node}: Closeness Centrality = {closeness}", file=sourceFile)
     betweeness=nx.betweenness_centrality(G_LEI, weight = 'weight')
+    for node, between in betweeness.items():
+        print(f"Node {node}: Betweenness Centrality = {between}",file=sourceFile)
     max_bc = max(betweeness, key = betweeness.get)
     print('Max Betweeness:',max_bc,file=sourceFile)
     # Calculate the density of the graph

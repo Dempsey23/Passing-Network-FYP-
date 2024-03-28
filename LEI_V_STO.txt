@@ -21,7 +21,7 @@ Shots off target: 7
 
 Eccentricity value of Modified Leicester Passing Graph {'4': 1, '28': 2, '1': 2, '11': 2, '14': 2, '26': 2, '6': 2, '20': 2, '17': 2, '5': 2, '9': 2}
 Average Eccentricity Values for Leicester Passing Graph: 1.9090909090909092
-Average Clustering of Passing Network: 0.17739417406145178
+Average Clustering of Passing Network: 0.1773941740614518
 Node 4: Closeness Centrality = 0.9090909090909091
 Node 28: Closeness Centrality = 0.7692307692307693
 Node 1: Closeness Centrality = 0.7142857142857143
@@ -33,6 +33,17 @@ Node 20: Closeness Centrality = 0.7142857142857143
 Node 17: Closeness Centrality = 0.9090909090909091
 Node 5: Closeness Centrality = 0.6666666666666666
 Node 9: Closeness Centrality = 0.7142857142857143
+Node 4: Betweenness Centrality = 0.03160493827160494
+Node 28: Betweenness Centrality = 0.0467283950617284
+Node 1: Betweenness Centrality = 0.13574074074074077
+Node 11: Betweenness Centrality = 0.03055555555555555
+Node 14: Betweenness Centrality = 0.1069753086419753
+Node 26: Betweenness Centrality = 0.20617283950617282
+Node 6: Betweenness Centrality = 0.02981481481481482
+Node 20: Betweenness Centrality = 0.030740740740740746
+Node 17: Betweenness Centrality = 0.026728395061728395
+Node 5: Betweenness Centrality = 0.15524691358024692
+Node 9: Betweenness Centrality = 0.053271604938271606
 Max Betweeness: 26
 Graph Density: 0.7181818181818181
 
