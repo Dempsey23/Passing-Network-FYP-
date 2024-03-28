@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: McGovern Dempsey
+    given-names: Finn
+    
+title: "Passing Network Analysis in Soccer"
+version: 1.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.1234
+date-released: 2024-28-04
