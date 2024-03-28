@@ -3,9 +3,8 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Finn"
   given-names: "McGovern Dempsey"
-  orcid: "https://orcid.org/0000-0000-0000-0000"
 title: "Passing Network Analysis in Soccer"
-version: 2.0.4
-doi: https://github.com/Dempsey23/Passing-Network-FYP-/tree/Initial-Draft-of-final-submission/GRAPHS%26RESULTS
+version: 1.0
+https://github.com/Dempsey23/Passing-Network-FYP-/tree/Initial-Draft-of-final-submission/GRAPHS%26RESULTS
 date-released: 2024-04-28
 url: "https://github.com/Dempsey23/Passing-Network-FYP-"
